@@ -1,0 +1,59 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Change Password{% endblock title %}
+
+{% block main-content %}
+<div class="container my-5">
+    <div class="row">
+        <!-- Fun GIPHY section on the left -->
+        <div class="col-sm-2 border-end text-center">
+            <div class="mb-3">
+                <iframe src="https://giphy.com/embed/l0MYEqEzwMWFCg8rm" width="100%" height="150" frameborder="0" class="giphy-embed rounded shadow-sm" allowfullscreen></iframe>
+                <small class="d-block mt-2 text-muted">Stay secure 🔒</small>
+            </div>
+
+            <ul class="list-unstyled">
+                <li class="d-grid">
+                    {% if request.user.is_authenticated %}
+                    <a href="{% url 'profile' %}" class="btn btn-primary mt-2">Profile</a>
+                    {% endif %}
+                </li>
+            </ul>
+        </div>
+  
+        <!-- Change password form -->
+        <div class="col-sm-8 offset-sm-1">
+            <hr>
+
+            <form method="post" novalidate class="shadow p-5">
+                {% csrf_token %}
+
+                {% for fm in form %}
+                    <div class="form-group mb-3">
+                        {{ fm.label_tag }} {{ fm }}
+                        <small class="text-danger">{{ fm.errors|striptags }}</small>
+                    </div>
+                {% endfor %}
+
+                <!-- Forgot password link -->
+                <div class="form-group mb-3 text-start">
+                    <small><a href="{% url 'password_reset' %}">Forgot Password?</a></small>
+                </div>
+
+                <div class="form-group d-grid mt-2">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger my-3">
+                        {% for error in form.non_field_errors %}
+                            <p>{{ error }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock main-content %}
