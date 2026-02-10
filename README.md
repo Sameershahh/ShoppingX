@@ -1,10 +1,10 @@
-# 🛒 Shoppingx – Full-Stack eCommerce Web Application
+#  Shoppingx – Full-Stack eCommerce Web Application
 
 A full-featured **eCommerce platform** built using **Django**, designed with a focus on **user experience**, **performance**, and **modular development**.
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Dynamic Product Listings** with filters by category and brand
 - **User Authentication & Authorization**
@@ -23,7 +23,7 @@ A full-featured **eCommerce platform** built using **Django**, designed with a f
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: Django, Python
 - **Frontend**: HTML, CSS, Bootstrap, JavaScript (AJAX)
@@ -33,7 +33,7 @@ A full-featured **eCommerce platform** built using **Django**, designed with a f
 
 ---
 
-## 🔒 Security Features
+## Security Features
 
 - CSRF Protection
 - Form Validation & Sanitization
@@ -41,3 +41,6 @@ A full-featured **eCommerce platform** built using **Django**, designed with a f
 
 ---
 
+##  Author
+**Sameer Shah** — AI & Full-Stack Developer  
+[Portfolio](https://sameershah-portfolio.vercel.app/) 
